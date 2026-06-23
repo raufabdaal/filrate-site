@@ -1,0 +1,624 @@
+/* 
+   FillRate "Clinical Luxury" Design System — Premium Edition
+   Radial Gradient Canvas / High-Contrast Matte Slate
+   Refined Serif Headlines / Clean Sans Body / Minimal Mono Accents
+*/
+
+/* --- Typography Setup --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --canvas-bg-center: #F9FAFB;
+  --canvas-bg-edge: #E2E8F0;
+  --panel-light: #FFFFFF;
+  --slate-matte: #1E293B;
+  --slate-midnight: #0F172A;
+  --accent-teal: #0D9488;
+  --accent-teal-glow: rgba(13, 148, 136, 0.15);
+  --accent-red-warning: rgba(239, 68, 68, 0.2);
+  --accent-red-text: #EF4444;
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-glass: rgba(13, 148, 136, 0.15);
+  --text-dark: #0F172A;
+  --text-muted: #475569;
+  --text-light: #F8FAFC;
+
+  /* Typography — Premium Edition */
+  --font-serif: 'Playfair Display', Georgia, Garamond, serif;
+  --font-sans: 'DM Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Courier New, monospace;
+
+  /* Spacing Scale — Premium breathing room */
+  --space-section: 7rem;
+  --space-section-lg: 8.5rem;
+}
+
+/* --- Global Reset & Base Canvas --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at 50% 15vh, var(--canvas-bg-center) 0%, var(--canvas-bg-edge) 100%);
+  background-attachment: fixed;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Serif Typography for Editorial Headlines */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Monospace Typography — RESTRICTED to data/numbers only */
+.font-mono-audit {
+  font-family: var(--font-mono);
+  letter-spacing: -0.03em;
+}
+
+/* Clean sans for body labels, badges, buttons */
+.font-label {
+  font-family: var(--font-sans);
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* --- Materiality: Frosted Glass Floating Layers --- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+/* --- Scroll-Reactive Nav-Pill — PREMIUM EDITION --- */
+#global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+#nav-pill {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.6s ease,
+              border-color 0.6s ease,
+              max-width 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              border-radius 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.6s ease;
+  will-change: transform, max-width, background-color, border-color, border-radius, backdrop-filter;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+}
+
+#nav-pill.scrolled {
+  max-width: 72rem;          /* Wider pill — was 56rem, now 72rem */
+  transform: translate3d(0, 16px, 0);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06), 0 0 0 1px rgba(255,255,255,0.5) inset;
+  border-bottom-color: transparent;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+/* Dark Containers for High-Priority Financial Data */
+.dark-slate-container {
+  background-color: var(--slate-matte);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-light);
+}
+
+.dark-midnight-container {
+  background-color: var(--slate-midnight);
+  border: 1px solid var(--accent-teal);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 0 20px var(--accent-teal-glow);
+  border-radius: 12px;
+  color: var(--text-light);
+}
+
+/* --- Interactive Hover Cards --- */
+.interactive-hover-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  will-change: transform, box-shadow;
+}
+.interactive-hover-card:hover {
+  transform: translate3d(0, -6px, 0);
+  border-color: var(--accent-teal);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08), 0 0 20px var(--accent-teal-glow);
+}
+
+/* Logo Marquee */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-loop 25s linear infinite;
+  will-change: transform;
+}
+@keyframes marquee-loop {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-item {
+  height: 28px;
+  width: auto;
+  opacity: 0.4;
+  margin-right: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+}
+.marquee-item:hover {
+  opacity: 0.8;
+}
+
+/* FAQ Accordion */
+.faq-row {
+  border-bottom: 1px solid var(--border-light);
+}
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  opacity: 0;
+  will-change: grid-template-rows, opacity;
+}
+.faq-answer > div {
+  overflow: hidden;
+}
+.faq-row.active .faq-answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* --- Scroll Intercept Engine Key Visual States --- */
+.leak-simulation-viewport {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--panel-light);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #F1F5F9;
+  border-bottom: 1px solid var(--border-light);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 12px 12px 0 0;
+}
+.window-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #CBD5E1;
+}
+
+/* Zone 1: Unanswered Call */
+.phone-log-row {
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+  will-change: opacity, background-color;
+}
+.phone-log-row.alert-active {
+  background-color: var(--accent-red-warning);
+}
+.phone-log-row.alert-dimmed {
+  opacity: 0.3;
+}
+.intercept-overlay-z1 {
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  border-radius: 0 0 12px 12px;
+}
+.leak-sim-container.active .intercept-overlay-z1 {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Zone 2: Empty Chair */
+.scheduler-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #E2E8F0;
+  padding: 1px;
+}
+.scheduler-cell {
+  height: 60px;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 8px;
+  font-size: 0.7rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.appointment-block-z2 {
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+  background: #FFFFFF;
+  border-left: 3px solid #64748B;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+}
+.appointment-block-z2.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.intercept-track-z2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--slate-matte);
+  border-left: 3px solid var(--accent-teal);
+  color: var(--text-light);
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+}
+.leak-sim-container.active .intercept-track-z2 {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Zone 3: Forgotten Treatment */
+.treatment-row {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease, filter 0.6s ease;
+  will-change: transform, opacity, filter;
+}
+.treatment-row.abandoned {
+  transform: translate3d(0, 0, -50px) scale(0.95);
+  opacity: 0.25;
+  filter: blur(2px);
+}
+.intercept-sweep-z3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-teal);
+  box-shadow: 0 0 10px var(--accent-teal);
+  transform: translate3d(-100px, 0, 0);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+.leak-sim-container.active .intercept-sweep-z3 {
+  transform: translate3d(500px, 0, 0);
+  opacity: 1;
+}
+.recovered-state-z3 {
+  opacity: 0;
+  transition: opacity 0.4s ease 0.4s;
+  will-change: opacity;
+}
+.leak-sim-container.active .recovered-state-z3 {
+  opacity: 1;
+}
+
+/* Zone 4: Drifted Patient */
+.patient-card-z4 {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  will-change: transform, border-color;
+}
+.patient-card-z4.drifted {
+  transform: translate3d(60px, 0, 0);
+}
+.leak-sim-container.active .patient-card-z4 {
+  transform: translate3d(0, 0, 0);
+}
+.patient-badge-z4 {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Zone 5: Invisible Practice */
+.practice-card-z5 {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  will-change: transform, background-color, border-color, box-shadow;
+}
+.leak-sim-container.active .practice-card-z5 {
+  transform: translate3d(0, -84px, 0);
+  border-color: var(--accent-teal);
+  box-shadow: 0 4px 15px var(--accent-teal-glow);
+}
+.rating-cascade-z5 {
+  transition: color 0.4s ease;
+}
+.leak-sim-container.active .rating-cascade-z5 {
+  color: var(--accent-teal);
+}
+
+/* Interactive Calculator Sliders */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #E2E8F0;
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  border: 2px solid rgba(255,255,255,0.9);
+  will-change: transform;
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3);
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 3px 10px rgba(13, 148, 136, 0.4);
+}
+
+/* Vapi Dialer Pulse Breathing Animation */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+/* Radial Dot-Matrix Background Texture */
+.dot-matrix-bg {
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ============================================
+   PREMIUM ADDITIONS — Scroll Reveal Animations
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children for sequential reveal */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.revealed > *:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger.revealed > *:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger.revealed > *:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger.revealed > *:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger.revealed > *:nth-child(6) { transition-delay: 400ms; }
+
+.reveal-stagger.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   PREMIUM — Contact Section Styles
+   ============================================ */
+
+.contact-section {
+  background: var(--slate-midnight);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--accent-teal);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='rgba(255,255,255,0.4)' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.contact-form select option {
+  background: var(--slate-midnight);
+  color: white;
+}
+
+.contact-form label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   PREMIUM — Subtle Button Hover States
+   ============================================ */
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn-primary:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ============================================
+   PREMIUM — Social Proof Strip
+   ============================================ */
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.stat-card:last-child::after {
+  display: none;
+}
+
+/* ============================================
+   PREMIUM — Footer Enhancement
+   ============================================ */
+
+.footer-premium {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-premium::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+  opacity: 0.3;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  #nav-pill.scrolled {
+    max-width: calc(100% - 32px);
+    border-radius: 16px;
+  }
+  #nav-pill {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .leak-simulation-viewport {
+    height: 340px;
+  }
+
+  .stat-card::after {
+    display: none;
+  }
+}

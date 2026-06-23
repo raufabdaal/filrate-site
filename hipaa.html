@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIPAA Compliance Statement | Filrate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F9FAFB] text-[#0F172A] min-h-screen flex flex-col">
+  <header class="border-b border-[rgba(15,23,42,0.06)] bg-white">
+    <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+      <a href="./index.html" class="font-serif-luxury text-xl font-bold tracking-tight text-[#0F172A]">Filrate</a>
+      <a href="./index.html" class="font-label text-xs uppercase tracking-wider text-slate-500 hover:text-slate-900 transition-colors">Back to Site</a>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-3xl mx-auto px-8 py-16">
+    <h1 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A] mb-2">HIPAA Compliance Statement</h1>
+    <p class="text-sm text-slate-400 font-label uppercase tracking-wider mb-10">Business Associate Agreement (BAA) Framework</p>
+
+    <div class="space-y-8 text-slate-600 leading-relaxed" style="font-family: var(--font-sans);">
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Our Role as a Business Associate</h2>
+        <p>Under the Health Insurance Portability and Accountability Act (HIPAA), Filrate operates as a Business Associate when providing services to covered entities (dental practices). We execute a Business Associate Agreement (BAA) with every practice partner before accessing, processing, or transmitting any Protected Health Information (PHI).</p>
+      </section>
+
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Safeguards We Maintain</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Encryption:</strong> All PHI is encrypted in transit using TLS 1.2 or higher and at rest using AES-256.</li>
+          <li><strong>Access Controls:</strong> Role-based access limits data exposure to only the engineers and systems required to deliver your specific service tier.</li>
+          <li><strong>Audit Logging:</strong> All access to PHI is logged and monitored for anomalous behavior.</li>
+          <li><strong>Data Minimization:</strong> We only collect and process the minimum data necessary to perform revenue recovery automation.</li>
+          <li><strong>Secure Infrastructure:</strong> Our production environment is hosted on cloud providers with SOC 2 Type II and HIPAA-compliant certifications.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Permitted Uses and Disclosures</h2>
+        <p>We use and disclose PHI solely to:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li>Execute automated patient recall, scheduling, and treatment-plan follow-up workflows on behalf of your practice.</li>
+          <li>Generate aggregated, de-identified operational analytics for your internal review.</li>
+          <li>Comply with legal obligations or public health authorities as required by law.</li>
+        </ul>
+        <p class="mt-3">We do not use PHI for marketing, advertising, or sale to third parties. We do not train machine-learning models on identifiable patient data without explicit written authorization.</p>
+      </section>
+
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Subcontractors</h2>
+        <p>We engage limited subprocessors (e.g., cloud hosting, voice processing) that may handle PHI in the course of service delivery. All subprocessors are vetted for HIPAA compliance and bound by BAAs or equivalent data protection agreements. A current list of subprocessors is available upon request.</p>
+      </section>
+
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Breach Notification</h2>
+        <p>In the event of a breach of unsecured PHI, we will notify the covered entity without unreasonable delay and in no case later than 60 days after discovery of the breach, as required by 45 CFR § 164.410. We will provide all necessary documentation to support the covered entity's notification obligations to affected individuals and the Department of Health and Human Services.</p>
+      </section>
+
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Data Retention and Return</h2>
+        <p>Upon termination of services, we will return or securely destroy all PHI held on behalf of the covered entity, except where retention is required by law or for secure backup rotation schedules. Destruction is performed using NIST 800-88 Rev. 1 compliant methods.</p>
+      </section>
+
+      <section>
+        <h2 class="font-serif-luxury text-xl text-[#0F172A] mb-3">Request a BAA</h2>
+        <p>To request a signed Business Associate Agreement or to ask specific compliance questions, contact us at <a href="mailto:hello@filrate.co" class="text-[#0D9488] hover:underline">hello@filrate.co</a>. We typically execute BAAs within 2 business days of onboarding initiation.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-[rgba(15,23,42,0.06)] bg-white py-12">
+    <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+      <span class="font-serif-luxury text-lg text-slate-900">Filrate</span>
+      <span class="font-label text-[10px] text-slate-400 uppercase tracking-wider">&copy; 2026 Filrate. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>

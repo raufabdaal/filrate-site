@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filrate | Dental Revenue Recovery System</title>
+  <meta name="description" content="Plug the five operational leaks costing your dental practice thousands in uncollected revenue. Automate patient recall, missed call recovery, and schedule optimization.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              900: '#0D9488',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F9FAFB] text-[#0F172A] selection:bg-teal-100 min-h-screen flex flex-col justify-between">
+
+  <!-- Header / Scroll-Reactive Nav-Pill -->
+  <header id="global-nav">
+    <div id="nav-pill" class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+      <div class="flex items-center gap-3">
+        <span class="font-serif-luxury text-xl font-bold tracking-tight text-[#0F172A]">Filrate</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-xs font-label uppercase tracking-wider text-slate-500">
+        <a href="#leaks" class="hover:text-slate-900 transition-colors duration-300">Operational Leaks</a>
+        <a href="#founder" class="hover:text-slate-900 transition-colors duration-300">Founder Story</a>
+        <a href="#pricing" class="hover:text-slate-900 transition-colors duration-300">Pricing &amp; SLA</a>
+        <a href="#contact" class="hover:text-slate-900 transition-colors duration-300">Contact</a>
+      </nav>
+      <div class="flex items-center gap-5">
+        <span class="hidden lg:inline font-label text-[10px] tracking-widest text-slate-400 uppercase">HIPAA Compliant</span>
+        <a href="#contact" class="btn-primary px-5 py-2.5 bg-[#0F172A] text-white hover:bg-[#1E293B] font-label text-[11px] uppercase tracking-widest rounded-full border border-slate-700 transition-all duration-300 shadow-sm">
+          Schedule Audit
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-28 lg:pt-36">
+    
+    <!-- SECTION 1: HERO -->
+    <section class="max-w-7xl mx-auto px-8 pb-20 lg:pb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start dot-matrix-bg">
+      
+      <div class="lg:col-span-7 space-y-8 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-teal-50 border border-teal-200 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488]"></span>
+          <span class="font-label text-[10px] uppercase tracking-widest text-[#0D9488]">Dental Revenue Recovery</span>
+        </div>
+
+        <h1 class="font-serif-luxury text-4xl md:text-5xl lg:text-[3.5rem] text-[#0F172A] leading-[1.1]">
+          <span class="font-mono-audit text-[#0D9488] block text-2xl md:text-3xl lg:text-4xl mb-3">$23,000 to $54,000</span>
+          leaks from the average dental practice every month.
+        </h1>
+        <p class="text-lg md:text-xl text-slate-500 leading-relaxed max-w-2xl" style="font-family: var(--font-sans);">
+          Filrate is the dental revenue recovery system. We plug the five operational leaks costing your practice thousands in uncollected revenue, without adding a single task to your front desk.
+        </p>
+        
+        <div class="pt-4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <a href="#contact" class="btn-primary px-7 py-4 bg-[#0F172A] text-white hover:bg-[#1E293B] font-label text-sm uppercase tracking-wider rounded-xl transition-colors border border-slate-700 shadow-sm">
+            Launch System Audit
+          </a>
+          <span class="font-label text-[11px] uppercase tracking-wider text-slate-400">
+            Currently accepting independent practices
+          </span>
+        </div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="lg:col-span-5 glass-panel p-6 border border-slate-200 shadow-sm relative overflow-hidden reveal">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0D9488] to-teal-400"></div>
+        <div class="mb-6 flex justify-between items-center">
+          <span class="font-label text-[10px] uppercase tracking-widest text-slate-400">Loss Assessment Calculator</span>
+          <span class="w-2 h-2 rounded-full bg-[#0D9488] animate-ping"></span>
+        </div>
+
+        <form class="space-y-6" onsubmit="return false;">
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label for="input-revenue" class="font-label text-[11px] uppercase tracking-wider text-slate-500">Monthly Practice Revenue</label>
+              <span id="label-revenue" class="font-mono-audit text-sm font-semibold text-slate-800">$100,000</span>
+            </div>
+            <input type="range" id="input-revenue" min="30000" max="500000" step="5000" value="100000">
+            <div class="flex justify-between text-[10px] text-slate-400 font-label">
+              <span>$30K</span>
+              <span>$500K</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label for="input-missed-calls" class="font-label text-[11px] uppercase tracking-wider text-slate-500">Unreturned Missed Calls / Day</label>
+              <span id="label-missed-calls" class="font-mono-audit text-sm font-semibold text-slate-800">4 calls</span>
+            </div>
+            <input type="range" id="input-missed-calls" min="0" max="20" step="1" value="4">
+            <div class="flex justify-between text-[10px] text-slate-400 font-label">
+              <span>0 Calls</span>
+              <span>20 Calls</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label for="input-noshow-rate" class="font-label text-[11px] uppercase tracking-wider text-slate-500">No-Show / Cancel Rate</label>
+              <span id="label-noshow-rate" class="font-mono-audit text-sm font-semibold text-slate-800">12%</span>
+            </div>
+            <input type="range" id="input-noshow-rate" min="0" max="30" step="1" value="12">
+            <div class="flex justify-between text-[10px] text-slate-400 font-label">
+              <span>0%</span>
+              <span>30%</span>
+            </div>
+          </div>
+
+          <div class="dark-midnight-container p-6 space-y-4">
+            <div class="border-b border-slate-800 pb-3 flex justify-between items-center">
+              <span class="font-label text-[10px] uppercase tracking-widest text-teal-400">Total Uncollected Revenue Leakage</span>
+              <span class="font-mono-audit text-[10px] text-slate-400">Est. Monthly</span>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <span id="output-total-leakage" class="font-mono-audit text-3xl font-bold tracking-tight text-[#FFFFFF]">$36,800</span>
+              <span class="font-label text-[10px] text-slate-400">per month</span>
+            </div>
+            <div class="pt-2 grid grid-cols-2 gap-4 text-xs border-t border-slate-800">
+              <div>
+                <span class="font-label text-[9px] uppercase text-slate-400 block mb-1">Recovery Scale</span>
+                <span id="output-recovery-scale" class="font-mono-audit text-teal-400 font-semibold text-sm">$25,760 - $33,120</span>
+              </div>
+              <div>
+                <span class="font-label text-[9px] uppercase text-slate-400 block mb-1">Efficiency Index</span>
+                <span id="output-efficiency" class="font-mono-audit text-white font-semibold text-sm">68%</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY STRIP - Honest credibility through process, not fake stats -->
+    <section class="border-t border-b border-[rgba(15,23,42,0.06)] bg-white py-14 reveal">
+      <div class="max-w-5xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-0">
+        <div class="stat-card">
+          <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">5</span>
+          <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Leak Vectors Identified</span>
+        </div>
+        <div class="stat-card">
+          <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">14</span>
+          <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Days to Deployment</span>
+        </div>
+        <div class="stat-card">
+          <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">24/7</span>
+          <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Autonomous Uptime</span>
+        </div>
+        <div class="stat-card">
+          <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">60-Day</span>
+          <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Written Guarantee</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Ribbon -->
+    <section class="border-b border-[rgba(15,23,42,0.06)] bg-white py-8">
+      <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="font-label text-[10px] text-slate-400 tracking-widest uppercase">
+          Integrates with your existing suite
+        </div>
+        <div class="marquee-container opacity-60">
+          <div class="marquee-track">
+            <div class="marquee-item">
+              <svg class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <span class="font-label text-xs font-bold tracking-tight text-slate-800">DENTRIX</span>
+            </div>
+            <div class="marquee-item">
+              <svg class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="font-label text-xs font-bold tracking-tight text-slate-800">EAGLESOFT</span>
+            </div>
+            <div class="marquee-item">
+              <svg class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+              <span class="font-label text-xs font-bold tracking-tight text-slate-800">OPEN DENTAL</span>
+            </div>
+            <div class="marquee-item">
+              <svg class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <span class="font-label text-xs font-bold tracking-tight text-slate-800">DENTRIX</span>
+            </div>
+            <div class="marquee-item">
+              <svg class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="font-label text-xs font-bold tracking-tight text-slate-800">EAGLESOFT</span>
+            </div>
+            <div class="marquee-item">
+              <svg class="h-4 w-4 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+              <span class="font-label text-xs font-bold tracking-tight text-slate-800">OPEN DENTAL</span>
+            </div>
+          </div>
+        </div>
+        <div class="font-label text-[10px] text-slate-400 tracking-widest uppercase">
+          Limited availability for independent practices
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE 5 LEAKS SCROLL ENGINE -->
+    <section id="leaks" class="max-w-7xl mx-auto px-8 py-24 lg:py-32 space-y-32 dot-matrix-bg">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A]">The Five Operational Leaks</h2>
+        <p class="font-label text-[11px] uppercase tracking-widest text-slate-400">Hover or scroll to trace autonomous interception</p>
+      </div>
+
+      <!-- LEAK 1 -->
+      <div id="leak-1" class="leak-sim-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-2">
+            <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full">01 · Telephony</span>
+            <span class="h-3 w-[1px] bg-slate-200"></span>
+            <span class="font-label text-[10px] text-slate-400">Dentrix Ledger integration</span>
+          </div>
+          <h3 class="font-serif-luxury text-2xl md:text-3xl text-[#0F172A]">
+            The Unreturned Call
+          </h3>
+          <p class="text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+            Average dental practices miss four patient calls a day. Unreturned voicemails and lunch-hour inquiries drift away silently. The caller dials the competitor instead.
+          </p>
+          <div class="dark-slate-container p-4 font-mono-audit text-xs flex justify-between items-center">
+            <span class="font-label" style="font-family: var(--font-sans); font-size: 10px; color: #94a3b8;">Leakage cost</span>
+            <span class="text-[#EF4444] font-semibold font-mono-audit">$3,600 - $8,400 / mo</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="leak-simulation-viewport shadow-sm">
+            <div class="window-titlebar">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <span class="ml-4 font-label text-[10px]" style="font-family: var(--font-sans);">Dentrix Office Journal / Call Log</span>
+            </div>
+            
+            <div class="p-6 space-y-4">
+              <div class="phone-log-row p-3 border border-slate-100 rounded-lg flex justify-between items-center text-xs">
+                <div class="flex items-center gap-3">
+                  <span class="font-mono-audit text-slate-400">09:15 AM</span>
+                  <span class="font-semibold text-slate-700" style="font-family: var(--font-sans);">Patient: Sarah Jenkins</span>
+                </div>
+                <span class="font-label text-slate-500 text-[10px]">Recall Booking → Scheduled</span>
+              </div>
+
+              <div id="z1-alert-row" class="phone-log-row alert-active p-3 border border-red-200 rounded-lg flex justify-between items-center text-xs">
+                <div class="flex items-center gap-3">
+                  <span class="font-mono-audit text-[#EF4444] font-bold">12:15 PM</span>
+                  <span class="font-semibold text-slate-700" style="font-family: var(--font-sans);">Inbound Call: (555) 019-3829</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-[#EF4444]"></span>
+                  <span class="font-label text-[10px] text-[#EF4444] uppercase font-semibold">Missed / No Message Left</span>
+                </div>
+              </div>
+
+              <div class="phone-log-row p-3 border border-slate-100 rounded-lg flex justify-between items-center text-xs">
+                <div class="flex items-center gap-3">
+                  <span class="font-mono-audit text-slate-400">02:30 PM</span>
+                  <span class="font-semibold text-slate-700" style="font-family: var(--font-sans);">Patient: Marcus Vance</span>
+                </div>
+                <span class="font-label text-slate-500 text-[10px]">Billing Query → Resolved</span>
+              </div>
+            </div>
+
+            <div class="intercept-overlay-z1 absolute inset-0 bg-[#0F172A] text-white p-6 flex flex-col justify-between">
+              <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                <span class="font-label text-[10px] uppercase tracking-widest text-[#0D9488]">Filrate Recovery Intercept</span>
+                <span class="font-mono-audit text-[10px] text-slate-500 bg-slate-900 px-2 py-0.5 rounded">Active</span>
+              </div>
+              <div class="my-auto space-y-3 font-mono-audit text-sm text-slate-300">
+                <p class="text-[#0D9488] font-semibold text-xs">[System Intercept: 24/7/365 Autonomous Reception]</p>
+                <p class="text-white">&gt; Patient Database Match: Sarah Vance (Family Account)</p>
+                <p class="text-white">&gt; Context: Outstanding Prophy + Crown Consultation Needed</p>
+                <p class="text-white">&gt; Action: Direct Text Sequence Triggered</p>
+              </div>
+              <div class="border-t border-slate-800 pt-3 flex justify-between items-center text-xs">
+                <span class="font-label text-[10px] text-slate-400">Result</span>
+                <span class="text-[#0D9488] font-bold font-mono-audit">Appt Confirmed: $420 Secured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAK 2 -->
+      <div id="leak-2" class="leak-sim-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+        <div class="lg:col-span-7 order-last lg:order-first">
+          <div class="leak-simulation-viewport shadow-sm relative">
+            <div class="window-titlebar">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <span class="ml-4 font-label text-[10px]" style="font-family: var(--font-sans);">Eaglesoft Scheduler / Operatory Overview</span>
+            </div>
+
+            <div class="p-4">
+              <div class="scheduler-grid text-[10px] text-slate-600">
+                <div class="bg-slate-100 p-2 font-label font-semibold border-b border-slate-200">Operatory 1</div>
+                <div class="bg-slate-100 p-2 font-label font-semibold border-b border-slate-200">Operatory 2</div>
+                <div class="bg-slate-100 p-2 font-label font-semibold border-b border-slate-200">Operatory 3</div>
+
+                <div class="scheduler-cell bg-slate-50 border-r border-slate-200">
+                  <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">David K.</span>
+                  <span class="font-mono-audit">09:00 · Prophy</span>
+                </div>
+                <div class="scheduler-cell bg-slate-50 border-r border-slate-200">
+                  <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">Emma R.</span>
+                  <span class="font-mono-audit">09:15 · Root Canal</span>
+                </div>
+                <div class="scheduler-cell bg-slate-50">
+                  <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">James P.</span>
+                  <span class="font-mono-audit">09:00 · Extraction</span>
+                </div>
+
+                <div class="scheduler-cell bg-slate-50 border-r border-slate-200">
+                  <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">Clara M.</span>
+                  <span class="font-mono-audit">10:30 · Hygiene</span>
+                </div>
+                
+                <div class="scheduler-cell bg-white border-r border-slate-200 relative overflow-hidden p-0">
+                  <div id="z2-appointment" class="appointment-block-z2 absolute inset-0 p-2 flex flex-col justify-center">
+                    <span class="font-semibold text-red-700" style="font-family: var(--font-sans);">Alice L.</span>
+                    <span class="font-mono-audit text-red-600 font-bold">$1,200 Crown</span>
+                    <span class="font-label text-[8px] text-red-600">Cancellation Alert</span>
+                  </div>
+                  <div class="intercept-track-z2">
+                    <span class="font-label text-[8px] text-teal-400 uppercase tracking-widest font-semibold">Intercept Active</span>
+                    <p class="font-label text-[9px] text-white mt-1">Waitlist Scan / Deposit Collected / Rescheduled</p>
+                  </div>
+                </div>
+
+                <div class="scheduler-cell bg-slate-50">
+                  <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">Robert T.</span>
+                  <span class="font-mono-audit">10:30 · Crown Prep</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-2">
+            <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full">02 · Capacity</span>
+            <span class="h-3 w-[1px] bg-slate-200"></span>
+            <span class="font-label text-[10px] text-slate-400">Eaglesoft API Sync</span>
+          </div>
+          <h3 class="font-serif-luxury text-2xl md:text-3xl text-[#0F172A]">
+            The Empty Chair
+          </h3>
+          <p class="text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+            Late cancellations leave clinical capacity empty. Standard waitlists require front desk personnel to call patients manually. Most slots expire empty.
+          </p>
+          <div class="dark-slate-container p-4 font-mono-audit text-xs flex justify-between items-center">
+            <span class="font-label" style="font-family: var(--font-sans); font-size: 10px; color: #94a3b8;">Leakage cost</span>
+            <span class="text-[#EF4444] font-semibold font-mono-audit">$5,000 - $12,000 / mo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAK 3 -->
+      <div id="leak-3" class="leak-sim-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-2">
+            <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full">03 · Clinical Retention</span>
+            <span class="h-3 w-[1px] bg-slate-200"></span>
+            <span class="font-label text-[10px] text-slate-400">Open Dental DB connection</span>
+          </div>
+          <h3 class="font-serif-luxury text-2xl md:text-3xl text-[#0F172A]">
+            The Forgotten Treatment
+          </h3>
+          <p class="text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+            Treatment plans go uncompleted. Outstanding diagnostics drift backward in the ledger. Patients neglect scaling and restoration procedures without follow-ups.
+          </p>
+          <div class="dark-slate-container p-4 font-mono-audit text-xs flex justify-between items-center">
+            <span class="font-label" style="font-family: var(--font-sans); font-size: 10px; color: #94a3b8;">Leakage cost</span>
+            <span class="text-[#EF4444] font-semibold font-mono-audit">$6,400 - $14,800 / mo</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="leak-simulation-viewport shadow-sm relative">
+            <div class="window-titlebar">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <span class="ml-4 font-label text-[10px]" style="font-family: var(--font-sans);">Open Dental Treatment Planner</span>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div class="grid grid-cols-12 gap-2 text-[10px] uppercase font-label text-slate-400 pb-2 border-b border-slate-100">
+                <span class="col-span-6">Procedure Detail</span>
+                <span class="col-span-3 text-right">Value</span>
+                <span class="col-span-3 text-right">Ledger Status</span>
+              </div>
+
+              <div class="grid grid-cols-12 gap-2 text-xs py-2 border-b border-slate-50 text-slate-600">
+                <span class="col-span-6 font-semibold" style="font-family: var(--font-sans);">#14 MO Composite Restoration</span>
+                <span class="col-span-3 text-right font-mono-audit">$340</span>
+                <span class="col-span-3 text-right text-green-600 font-label text-[10px] uppercase tracking-wider">Scheduled</span>
+              </div>
+
+              <div id="z3-treatment-row" class="treatment-row grid grid-cols-12 gap-2 text-xs py-3 border-b border-slate-50 text-slate-800">
+                <span class="col-span-6 font-semibold text-slate-900" style="font-family: var(--font-sans);">#19 Quad Scaling &amp; Root Planing</span>
+                <span class="col-span-3 text-right font-mono-audit text-red-500 font-bold">$1,450</span>
+                <span class="col-span-3 text-right text-red-500 font-label text-[10px] uppercase tracking-wider">Unscheduled</span>
+              </div>
+
+              <div class="grid grid-cols-12 gap-2 text-xs py-2 border-b border-slate-50 text-slate-600">
+                <span class="col-span-6 font-semibold" style="font-family: var(--font-sans);">#3 Crown Consultation</span>
+                <span class="col-span-3 text-right font-mono-audit">$180</span>
+                <span class="col-span-3 text-right text-slate-400 font-label text-[10px] uppercase">Pending Auth</span>
+              </div>
+
+              <div id="z3-recovered-indicator" class="recovered-state-z3 p-3 bg-teal-50 border border-teal-200 rounded-lg flex justify-between items-center text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-[#0D9488]"></span>
+                  <span class="font-label text-teal-800 uppercase font-semibold text-[10px]">Filrate Recovered</span>
+                </div>
+                <span class="font-mono-audit text-teal-900 font-bold">+$1,450 Recovered</span>
+              </div>
+            </div>
+
+            <div id="z3-sweep-line" class="intercept-sweep-z3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAK 4 -->
+      <div id="leak-4" class="leak-sim-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+        <div class="lg:col-span-7 order-last lg:order-first">
+          <div class="leak-simulation-viewport shadow-sm relative">
+            <div class="window-titlebar">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <span class="ml-4 font-label text-[10px]" style="font-family: var(--font-sans);">Recall &amp; Hygiene Maintenance List</span>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div class="grid grid-cols-12 gap-2 text-[10px] uppercase font-label text-slate-400 pb-2 border-b border-slate-100">
+                <span class="col-span-5">Patient Name</span>
+                <span class="col-span-4 text-center">Last Hygiene Visit</span>
+                <span class="col-span-3 text-right">Recall Status</span>
+              </div>
+
+              <div class="grid grid-cols-12 gap-2 text-xs py-2 items-center border-b border-slate-50 text-slate-600">
+                <span class="col-span-5 font-semibold" style="font-family: var(--font-sans);">David Ross</span>
+                <span class="col-span-4 text-center font-mono-audit">6 Months Ago</span>
+                <span class="col-span-3 text-right text-slate-400 font-label text-[10px]">Booked</span>
+              </div>
+
+              <div id="z4-patient-card" class="patient-card-z4 grid grid-cols-12 gap-2 text-xs py-3 items-center border border-slate-100 p-2 rounded-lg text-slate-800">
+                <span class="col-span-5 font-semibold text-slate-900" style="font-family: var(--font-sans);">Linda K.</span>
+                <span class="col-span-4 text-center font-mono-audit text-red-500 font-bold">14 Months Ago</span>
+                <span class="col-span-3 text-right">
+                  <span id="z4-badge" class="patient-badge-z4 inline-block font-label text-[9px] uppercase tracking-wider bg-red-50 text-red-600 border border-red-200 px-2 py-0.5 rounded-full">Drifting</span>
+                </span>
+              </div>
+
+              <div class="grid grid-cols-12 gap-2 text-xs py-2 items-center border-b border-slate-50 text-slate-600">
+                <span class="col-span-5 font-semibold" style="font-family: var(--font-sans);">Michael Cheng</span>
+                <span class="col-span-4 text-center font-mono-audit">5 Months Ago</span>
+                <span class="col-span-3 text-right text-slate-400 font-label text-[10px]">Booked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-2">
+            <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full">04 · Recall Enhancement</span>
+            <span class="h-3 w-[1px] bg-slate-200"></span>
+            <span class="font-label text-[10px] text-slate-400">Hygiene database integration</span>
+          </div>
+          <h3 class="font-serif-luxury text-2xl md:text-3xl text-[#0F172A]">
+            The Drifted Patient
+          </h3>
+          <p class="text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+            Patients slip past their 6-month recall threshold. Front desks lack cycles to call clinical cohorts regularly. Hygiene revenue leaks as patients drift away.
+          </p>
+          <div class="dark-slate-container p-4 font-mono-audit text-xs flex justify-between items-center">
+            <span class="font-label" style="font-family: var(--font-sans); font-size: 10px; color: #94a3b8;">Leakage cost</span>
+            <span class="text-[#EF4444] font-semibold font-mono-audit">$4,800 - $9,200 / mo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAK 5 -->
+      <div id="leak-5" class="leak-sim-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-2">
+            <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full">05 · Acquisition</span>
+            <span class="h-3 w-[1px] bg-slate-200"></span>
+            <span class="font-label text-[10px] text-slate-400">Google Business Engine sync</span>
+          </div>
+          <h3 class="font-serif-luxury text-2xl md:text-3xl text-[#0F172A]">
+            The Invisible Practice
+          </h3>
+          <p class="text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+            Prospective patients search for local dental clinics. Without recent positive feedback reviews, local search algorithms rank competitor practices higher, capturing your market share.
+          </p>
+          <div class="dark-slate-container p-4 font-mono-audit text-xs flex justify-between items-center">
+            <span class="font-label" style="font-family: var(--font-sans); font-size: 10px; color: #94a3b8;">Leakage cost</span>
+            <span class="text-[#EF4444] font-semibold font-mono-audit">$3,200 - $6,200 / mo</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="leak-simulation-viewport shadow-sm relative">
+            <div class="window-titlebar">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <span class="ml-4 font-label text-[10px]" style="font-family: var(--font-sans);">Local Dental Directory / Search Simulation</span>
+            </div>
+
+            <div class="p-4 grid grid-cols-2 gap-4">
+              <div class="border-r border-slate-100 pr-4">
+                <span class="font-label text-[10px] text-slate-400 block mb-2">Google Map Pack View</span>
+                
+                <div class="competitor-list text-[11px] space-y-2">
+                  <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg">
+                    <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">Metro Dental Group</span>
+                    <div class="flex justify-between font-label text-[9px] text-slate-500">
+                      <span>Reviews: 242</span>
+                      <span class="text-amber-500">★ 4.8</span>
+                    </div>
+                  </div>
+
+                  <div class="p-2 bg-slate-50 border border-slate-100 rounded-lg">
+                    <span class="font-semibold text-slate-800" style="font-family: var(--font-sans);">Apex Smile Clinic</span>
+                    <div class="flex justify-between font-label text-[9px] text-slate-500">
+                      <span>Reviews: 184</span>
+                      <span class="text-amber-500">★ 4.7</span>
+                    </div>
+                  </div>
+
+                  <div id="z5-practice-card" class="practice-card-z5 p-2 border border-slate-200 rounded-lg bg-white">
+                    <span class="font-semibold text-slate-900 block" style="font-family: var(--font-sans);">Your Dental Practice</span>
+                    <div class="flex justify-between font-label text-[9px] text-slate-500">
+                      <span id="z5-reviews-count">Reviews: 42</span>
+                      <span id="z5-rating-count" class="rating-cascade-z5">★ 4.1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col justify-between font-label text-[10px] text-slate-600 bg-[#F8FAFC] p-3 rounded-lg border border-slate-100">
+                <div>
+                  <span class="text-slate-400 block mb-2">CHECKOUT EVENT TRIGGER</span>
+                  <p class="text-slate-700 font-semibold" style="font-family: var(--font-sans);">&gt; Patient Appointment Checked Out</p>
+                  <p style="font-family: var(--font-sans);">&gt; Survey Text Routed Autonomously</p>
+                </div>
+
+                <div class="mt-4 border-t border-slate-200 pt-2 space-y-1">
+                  <span class="text-slate-400 block">System Feedback Flow</span>
+                  <div class="bg-white p-2 rounded border border-slate-100 text-[8px] text-slate-700" style="font-family: var(--font-sans);">
+                    "Thank you for visiting today. Rate your care on our profile."
+                  </div>
+                  <div class="flex justify-end pt-1">
+                    <span id="z5-badge-active" class="hidden font-label text-[8px] text-teal-700 bg-teal-50 border border-teal-200 px-1.5 py-0.5 rounded-full">Intercept Executed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOUNDER STORY -->
+    <section id="founder" class="border-t border-b border-[rgba(15,23,42,0.06)] bg-white py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center reveal">
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488]"></span>
+            <span class="font-label text-[10px] uppercase tracking-widest text-[#0D9488] font-semibold">Founder Profile</span>
+          </div>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl lg:text-5xl text-[#0F172A] leading-tight">
+            Built from the operatory. Not the boardroom.
+          </h2>
+          <div class="space-y-6 text-slate-500 leading-relaxed text-base" style="font-family: var(--font-sans);">
+            <p>
+              Filrate was not conceived in a technology incubator or a corporate boardroom. It was forged directly in the operational friction of a real high-volume practice: Dino Dental Kampala, a multi-operatory clinic serving patients daily.
+            </p>
+            <p>
+              Working inside that practice, our founder watched clinical personnel struggle under administrative load. Answering patient recall inquiries, chasing late cancellations, tracking outstanding treatment plan values from the database ledger. Every day, front desk teams were expected to perform manual miracles to keep chairs full, while thousands in uncollected revenues drifted away.
+            </p>
+            <p class="font-medium text-slate-700 text-lg" style="font-family: var(--font-serif); font-style: italic;">
+              "We realized that the solution was not another software portal that required more manual hours from your staff. It had to be a silent, autonomous infrastructure layer, operating invisibly to plug these operational gaps in real-time."
+            </p>
+          </div>
+          <div class="pt-6 flex items-center gap-4">
+            <div class="h-12 w-[2px] bg-[#0D9488]"></div>
+            <div>
+              <span class="font-label text-[10px] uppercase tracking-widest text-slate-400 block font-semibold mb-1">Clinical Lead</span>
+              <span class="font-serif-luxury text-xl text-slate-800">Dr. Adrian K., Founder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <div class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-teal-50 to-slate-100 opacity-50 -z-10 blur-2xl"></div>
+            <div class="glass-panel p-5 border border-slate-200 shadow-lg">
+              <img src="assets/founder.jpg" alt="Founder Portrait" class="w-full h-auto rounded-xl grayscale hover:grayscale-0 transition-all duration-700 shadow-sm border border-slate-100">
+              <div class="mt-4 flex justify-between items-center px-1">
+                <span class="font-label text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Clinical Operations</span>
+                <span class="font-mono-audit text-[10px] text-[#0D9488] font-bold">EST. 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="max-w-7xl mx-auto px-8 py-24 lg:py-32 space-y-16 dot-matrix-bg">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">Pricing Structures</span>
+        <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A]">Zero Risk Performance Infrastructure</h2>
+        <p class="font-label text-[11px] uppercase tracking-widest text-slate-400">Select the tier optimized for your clinical volume</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch reveal-stagger">
+        
+        <!-- SENTRY -->
+        <div class="glass-panel p-8 flex flex-col justify-between border border-slate-200 shadow-sm relative overflow-hidden interactive-hover-card">
+          <div class="space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+              <span class="font-label text-[10px] uppercase tracking-widest text-slate-400 block font-semibold mb-2">The Sentry Tier</span>
+              <div class="flex items-baseline">
+                <span class="font-mono-audit text-3xl font-bold text-slate-800">$497</span>
+                <span class="font-label text-xs text-slate-400 ml-1">/ month</span>
+              </div>
+            </div>
+            <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+              Autonomous baseline protection for independent operators who require essential intake coverage and patient recall automation.
+            </p>
+            <ul class="space-y-3" style="font-family: var(--font-sans);">
+              <li class="flex items-center gap-2.5 text-sm text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488] flex-shrink-0"></span>
+                Autonomous Reception
+              </li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488] flex-shrink-0"></span>
+                Inbound Call Intercept
+              </li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488] flex-shrink-0"></span>
+                Native PMS Calendar Syncing
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a href="https://calendly.com/raufabdaal/filrate-onboarding" target="_blank" rel="noopener" class="block text-center w-full py-3 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 rounded-xl font-label text-xs uppercase tracking-wider transition-colors font-semibold">
+              Schedule Onboarding Call
+            </a>
+          </div>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="dark-midnight-container p-8 flex flex-col justify-between border-2 border-teal-600 shadow-lg relative overflow-hidden interactive-hover-card">
+          <div class="absolute top-0 right-0 bg-[#0D9488] text-white font-label text-[9px] uppercase tracking-wider px-3 py-1.5 rounded-bl-xl">
+            Priority Selection
+          </div>
+          <div class="space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+              <span class="font-label text-[10px] uppercase tracking-widest text-teal-400 block font-semibold mb-2">The Standard Tier</span>
+              <div class="flex items-baseline">
+                <span class="font-mono-audit text-3xl font-bold text-white">$2,497</span>
+                <span class="font-label text-xs text-slate-400 ml-1">/ month</span>
+              </div>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed" style="font-family: var(--font-sans);">
+              Our comprehensive operational recovery suite built for practices seeking complete automation across all five primary revenue leaks.
+            </p>
+            <ul class="space-y-3" style="font-family: var(--font-sans);">
+              <li class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+                Complete 5-Module Recovery Suite
+              </li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+                Predictive No-Show Prevention
+              </li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+                Automatic Treatment Follow-Up
+              </li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+                Patient Reactivation Pathways
+              </li>
+              <li class="flex items-center gap-2.5 text-sm text-slate-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+                Live Revenue Leak Reporting
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a href="https://calendly.com/raufabdaal/filrate-onboarding" target="_blank" rel="noopener" class="btn-primary block text-center w-full py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-label text-xs uppercase tracking-wider transition-colors font-semibold shadow-md">
+              Schedule Onboarding Call
+            </a>
+          </div>
+        </div>
+
+        <!-- GUARANTEE -->
+        <div class="glass-panel p-8 flex flex-col justify-between border border-slate-200 shadow-sm relative overflow-hidden interactive-hover-card">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#EF4444] to-orange-400"></div>
+          <div class="space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+              <span class="font-label text-[10px] uppercase tracking-widest text-[#EF4444] block font-semibold mb-2">Performance Covenant</span>
+              <h3 class="font-serif-luxury text-lg text-slate-800 font-semibold">Our 60-Day Performance Guarantee</h3>
+            </div>
+            <div class="text-sm text-slate-500 space-y-4 leading-relaxed" style="font-family: var(--font-sans);">
+              <p>
+                We operate on a rigid performance model. We plug operational gaps in your scheduling and recall infrastructure.
+              </p>
+              <p class="font-medium text-slate-700">
+                We guarantee a recovery rate of <span class="font-mono-audit text-slate-900 font-semibold">$18,000</span> to <span class="font-mono-audit text-slate-900 font-semibold">$34,000</span> within the first 60 days.
+              </p>
+              <p>
+                If the system fails to secure this minimum target, you pay nothing.
+              </p>
+            </div>
+          </div>
+          <div class="pt-8">
+            <a href="#contact" class="block text-center w-full py-3 bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 rounded-xl font-label text-xs uppercase tracking-wider transition-colors font-semibold">
+              Read SLA Guarantee
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIVE DEMO -->
+    <section id="demo" class="border-t border-[rgba(15,23,42,0.06)] bg-white py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+        
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-full border border-slate-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488]"></span>
+            <span class="font-label text-[10px] uppercase tracking-widest text-[#0D9488] font-semibold">Live System Auditing</span>
+          </div>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A] leading-tight">
+            Audit Your Revenue Leaks with Adam.
+          </h2>
+          <p class="text-slate-500 leading-relaxed text-base" style="font-family: var(--font-sans);">
+            Experience our autonomous interception capabilities in real-time. Initiate a simulated audio audit to see how our voice assistant, Adam, seamlessly intercepts an unreturned missed call and schedules the patient.
+          </p>
+          <p class="text-slate-500 leading-relaxed text-base" style="font-family: var(--font-sans);">
+            This live demonstration mirrors the exact natural language dialogue pathways utilized inside Eaglesoft and Dentrix setups to secure bookings without staff intervention.
+          </p>
+          <div class="pt-4 border-t border-slate-100">
+            <p class="font-label text-[10px] text-slate-400 uppercase tracking-wider font-semibold">
+              BAA Compliant Voice Processing Engine
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="dark-slate-container w-full max-w-md p-8 text-center relative overflow-hidden group border border-slate-700 shadow-lg">
+            <div class="absolute -top-12 -left-12 w-24 h-24 bg-teal-900 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+            
+            <span class="font-label text-[10px] text-teal-400 uppercase tracking-widest block mb-6">Integration Audit</span>
+            
+            <button id="open-vapi-btn" class="mx-auto w-20 h-20 bg-teal-900 hover:bg-teal-950 text-white rounded-full flex items-center justify-center transition-all transform hover:scale-105 active:scale-95 shadow-md border border-teal-400 relative z-10 focus:outline-none">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+            
+            <h4 class="font-serif-luxury text-xl text-white mt-8 mb-3">Experience Interception Real-time</h4>
+            <p class="text-slate-400 text-xs leading-relaxed max-w-xs mx-auto mb-6" style="font-family: var(--font-sans);">
+              Initiate System Audit Interaction Demo. Click to experience how an unreturned after-hours call is intercepted in real-time.
+            </p>
+            
+            <div class="inline-flex items-center gap-2 border border-slate-800 rounded-full bg-[#0F172A] px-4 py-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+              <span class="font-label text-[9px] text-slate-400 uppercase tracking-wider">Demo Operator: Voice Assistant Adam</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="border-t border-[rgba(15,23,42,0.06)] bg-white py-24 lg:py-32">
+      <div class="max-w-4xl mx-auto px-8 space-y-12 reveal">
+        <div class="text-center space-y-4">
+          <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">Common Inquiries</span>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A]">System Inquiries</h2>
+        </div>
+
+        <div class="space-y-2">
+          <div id="faq-row-1" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                Does Filrate integrate natively with my current software?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                Yes. The platform connects directly with Dentrix, Eaglesoft, and Open Dental via secure, real-time synchronization pipelines.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-2" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                How much training does this require for my front desk team?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                Zero. Filrate operates as a fully managed infrastructure layer. It works autonomously in the background without adding a single task to your administrative workflow.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-3" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                What is the timeline from the audit to active deployment?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                Full configuration and secure system integration are completed within 14 business days from your initial Revenue Leak Audit.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-4" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                Is Filrate going to sound robotic to my patients?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                No. Adam uses our proprietary clinical-grade voice engine. He speaks with natural cadence, pauses, and empathy. Patients regularly compliment front desks on "the new hire's" professional phone manner.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-5" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                Do I need to buy new hardware?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                None. Filrate routes autonomously through your existing telephony provider (RingCentral, Weave, Mango, etc.) and connects directly via API/webhook logic to your software.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-6" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                What does HIPAA compliance actually mean here?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                All patient interactions are encrypted. Call recordings are stored on HIPAA-compliant infrastructure. We sign a Business Associate Agreement with every practice. Patient data is never shared, sold, or used for any purpose outside your practice's operations.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-7" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                How long until I see results?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                Most practices see measurable revenue recovery within 30 days. Our guarantee threshold is <span class="font-mono-audit font-semibold">$5,000</span> in recovered revenue within 60 days, and that's a conservative floor.
+              </p>
+            </div></div>
+          </div>
+
+          <div id="faq-row-8" class="faq-row py-5 group cursor-pointer">
+            <div class="faq-trigger flex justify-between items-center">
+              <h3 class="font-serif-luxury text-lg md:text-xl text-slate-800 group-hover:text-[#0D9488] transition-colors">
+                Can I start with just the Autonomous Reception?
+              </h3>
+              <span class="faq-icon text-slate-400 group-hover:text-slate-600 transition-colors text-lg font-light" style="font-family: var(--font-sans);">+</span>
+            </div>
+            <div class="faq-answer"><div>
+              <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
+                Yes. Many practices start with The Sentry tier and expand to The Standard once they see the results. There is no penalty for upgrading.
+              </p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILOT / TRUST -->
+    <section id="pilot" class="border-t border-b border-[rgba(15,23,42,0.06)] bg-white py-20 lg:py-24">
+      <div class="max-w-5xl mx-auto px-8 text-center space-y-8 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488]"></span>
+          <span class="font-label text-[10px] uppercase tracking-widest text-[#0D9488] font-semibold">Early Access Program</span>
+        </div>
+        <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A]">No fabricated testimonials. Just guaranteed outcomes.</h2>
+        <p class="text-slate-500 leading-relaxed max-w-2xl mx-auto" style="font-family: var(--font-sans);">
+          We are not using fake reviews or invented clinic logos to earn your trust. Filrate is built inside a real practice, and we let the numbers speak. Every new partner starts with a free Revenue Leak Audit and a 60-day written performance guarantee.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">$18K</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Minimum 60-Day Recovery</span>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">0</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Front-Desk Training Required</span>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">5/mo</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">New Practices Onboarded</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
+        
+        <div class="space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-teal-900/30 border border-teal-700/30 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+            <span class="font-label text-[10px] uppercase tracking-widest text-teal-400 font-semibold">Schedule Your Revenue Audit</span>
+          </div>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
+            See your practice's numbers.<br>
+            <span class="text-teal-400">In 30 minutes.</span>
+          </h2>
+          <p class="text-slate-400 leading-relaxed text-lg" style="font-family: var(--font-sans);">
+            We'll show you exactly how much revenue your specific practice is leaking each month. No pitch. No pressure. Just your numbers.
+          </p>
+          <div class="space-y-4 pt-4">
+            <div class="flex items-center gap-3 text-sm text-slate-300" style="font-family: var(--font-sans);">
+              <span class="w-6 h-6 rounded-full bg-teal-900/40 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Completely free, no credit card required
+            </div>
+            <div class="flex items-center gap-3 text-sm text-slate-300" style="font-family: var(--font-sans);">
+              <span class="w-6 h-6 rounded-full bg-teal-900/40 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              30-minute live walkthrough with a specialist
+            </div>
+            <div class="flex items-center gap-3 text-sm text-slate-300" style="font-family: var(--font-sans);">
+              <span class="w-6 h-6 rounded-full bg-teal-900/40 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Custom revenue leak report for your practice
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel p-8 lg:p-10 border border-white/10 shadow-xl bg-white/5 backdrop-blur-xl" style="border-radius: 20px;">
+          <form id="contact-form" class="contact-form space-y-5" onsubmit="return false;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" placeholder="Dr. Jane Smith" required>
+              </div>
+              <div>
+                <label for="contact-practice">Practice Name</label>
+                <input type="text" id="contact-practice" placeholder="Smith Dental Group" required>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="jane@practice.com" required>
+              </div>
+              <div>
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" placeholder="(555) 123-4567">
+              </div>
+            </div>
+            <div>
+              <label for="contact-tier">Interested Tier</label>
+              <select id="contact-tier">
+                <option value="">Select a tier...</option>
+                <option value="sentry">The Sentry Tier / $497/mo</option>
+                <option value="standard">The Standard Tier / $2,497/mo</option>
+                <option value="enterprise">Enterprise / Custom Deployment</option>
+                <option value="audit">Free Revenue Audit Only</option>
+              </select>
+            </div>
+            <div>
+              <label for="contact-message">How can we help?</label>
+              <textarea id="contact-message" rows="3" placeholder="Tell us about your practice and what you're looking to solve..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full py-4 bg-[#0D9488] hover:bg-teal-700 text-white font-label text-sm uppercase tracking-widest rounded-xl transition-colors font-semibold shadow-md border border-teal-500">
+              Schedule Your Free Revenue Audit
+            </button>
+            <p class="text-center font-label text-[9px] text-slate-400 uppercase tracking-wider mt-3">
+              HIPAA Compliant · BAA Available · No Spam · Response within 2 hours
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="checkout-sentry" class="scroll-mt-32"></div>
+    <div id="checkout-standard" class="scroll-mt-32"></div>
+
+  </main>
+
+  <!-- Vapi Modal -->
+  <div id="vapi-modal" class="fixed inset-0 z-50 bg-[#0F172A] bg-opacity-85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-panel w-full max-w-3xl h-[600px] flex flex-col overflow-hidden relative border border-slate-700 shadow-2xl bg-white" style="border-radius: 20px;">
+      
+      <div class="window-titlebar justify-between px-6 py-4 bg-[#F8FAFC]" style="border-radius: 20px 20px 0 0;">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-400 cursor-pointer hover:bg-red-500 transition-colors" id="close-modal-btn"></span>
+          <span class="w-3 h-3 rounded-full bg-[#E2E8F0]"></span>
+          <span class="w-3 h-3 rounded-full bg-[#E2E8F0]"></span>
+          <span class="ml-4 font-label text-[11px] uppercase tracking-wider text-slate-600">System Intercept Audit Demo / Operator: Adam</span>
+        </div>
+        <button id="close-modal-x" class="text-slate-500 hover:text-slate-800 font-label text-xs uppercase font-semibold transition-colors">Close</button>
+      </div>
+      
+      <div class="flex-grow w-full h-full bg-[#FFFFFF] relative overflow-hidden">
+        <iframe id="vapi-iframe" class="w-full h-full border-0" src="about:blank" allow="microphone" title="Adam Voice Demo"></iframe>
+      </div>
+      
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center" style="border-radius: 0 0 20px 20px;">
+        <span class="font-label text-[10px] text-slate-500">ADAM VOICE INTERFACE — VAPI EMBED</span>
+        <span class="font-label text-[10px] text-slate-400">SSL ENCRYPTED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-premium w-full py-20 px-8 border-t border-[rgba(15,23,42,0.06)] bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center pb-16 border-b border-slate-100 mb-12 reveal">
+        <h3 class="font-serif-luxury text-3xl md:text-4xl text-slate-900 mb-4">Ready to recover your revenue?</h3>
+        <p class="text-slate-500 mb-8 max-w-lg mx-auto" style="font-family: var(--font-sans);">
+          Get a custom revenue leak report for your practice. No pitch. No pressure.
+        </p>
+        <a href="#contact" class="btn-primary inline-block px-8 py-4 bg-[#0F172A] text-white hover:bg-[#1E293B] font-label text-sm uppercase tracking-widest rounded-full border border-slate-700 transition-all shadow-sm font-semibold">
+          Schedule Your Free Revenue Audit
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="space-y-4">
+          <span class="font-serif-luxury text-xl text-slate-900">Filrate</span>
+          <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
+            Dental revenue recovery infrastructure. Silent, autonomous, clinically precise.
+          </p>
+          <div class="font-label text-xs text-slate-400">
+            <a href="mailto:hello@filrate.co" class="text-slate-400 hover:text-[#0D9488] transition-colors">hello@filrate.co</a>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <span class="font-label text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Product</span>
+          <div class="space-y-2">
+            <a href="#leaks" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">Operational Leaks</a>
+            <a href="#pricing" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">Pricing &amp; SLA</a>
+            <a href="#demo" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">Live Demo</a>
+            <a href="#faq" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">FAQ</a>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <span class="font-label text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Legal</span>
+          <div class="space-y-2">
+            <a href="./privacy.html" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">Privacy Policy</a>
+            <a href="./terms.html" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">Terms of Service</a>
+            <a href="./hipaa.html" class="block text-sm text-slate-500 hover:text-slate-800 transition-colors" style="font-family: var(--font-sans);">HIPAA Compliance Statement</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-12 mt-8 border-t border-slate-100 text-center">
+        <span class="font-label text-[10px] text-slate-400 uppercase tracking-wider">
+          &copy; 2026 Filrate. All rights reserved.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
