@@ -253,33 +253,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // --- 6. Event-Driven Vapi Dialer Overlay (Iframe Embed) ---
+  // --- 6. Event-Driven Vapi Dialer Overlay (External Launch) ---
   const openVapiBtn = document.getElementById("open-vapi-btn");
   const vapiModal = document.getElementById("vapi-modal");
   const closeModalBtn = document.getElementById("close-modal-btn");
   const closeModalX = document.getElementById("close-modal-x");
-  const vapiIframe = document.getElementById("vapi-iframe");
+  const vapiLaunchBtn = document.getElementById("vapi-launch-btn");
+  const vapiCancelBtn = document.getElementById("vapi-cancel-btn");
 
   function openDemo() {
     vapiModal.classList.remove("hidden");
     vapiModal.classList.add("flex");
-    
-    if (typeof CONFIG !== "undefined" && CONFIG.VAPI_DEMO_URL) {
-      vapiIframe.src = CONFIG.VAPI_DEMO_URL;
-    } else {
-      vapiIframe.src = "https://vapi.ai";
-    }
   }
 
   function closeDemo() {
     vapiModal.classList.remove("flex");
     vapiModal.classList.add("hidden");
-    vapiIframe.src = "about:blank";
+  }
+
+  function launchVapiSession() {
+    const url = (typeof CONFIG !== "undefined" && CONFIG.VAPI_DEMO_URL) ? CONFIG.VAPI_DEMO_URL : "https://vapi.ai";
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   if (openVapiBtn) openVapiBtn.addEventListener("click", openDemo);
   if (closeModalBtn) closeModalBtn.addEventListener("click", closeDemo);
   if (closeModalX) closeModalX.addEventListener("click", closeDemo);
+  if (vapiLaunchBtn) vapiLaunchBtn.addEventListener("click", launchVapiSession);
+  if (vapiCancelBtn) vapiCancelBtn.addEventListener("click", closeDemo);
 
   vapiModal.addEventListener("click", (e) => {
     if (e.target === vapiModal) {
