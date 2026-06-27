@@ -35,6 +35,7 @@
       </div>
       <nav class="hidden md:flex items-center gap-8 text-xs font-label uppercase tracking-wider text-slate-500">
         <a href="#leaks" class="hover:text-slate-900 transition-colors duration-300">Operational Leaks</a>
+        <a href="#timeline" class="hover:text-slate-900 transition-colors duration-300">Process</a>
         <a href="#founder" class="hover:text-slate-900 transition-colors duration-300">Founder Story</a>
         <a href="#pricing" class="hover:text-slate-900 transition-colors duration-300">Pricing &amp; SLA</a>
         <a href="#contact" class="hover:text-slate-900 transition-colors duration-300">Contact</a>
@@ -143,6 +144,17 @@
             </div>
           </div>
         </form>
+        <div class="mt-4 pt-4 border-t border-slate-100">
+          <button type="button" class="faq-trigger flex justify-between items-center w-full text-left group" onclick="this.parentElement.querySelector('.calc-method').classList.toggle('hidden'); this.querySelector('.calc-icon').textContent = this.parentElement.querySelector('.calc-method').classList.contains('hidden') ? '+' : '−';">
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-[#0D9488] transition-colors">How we calculate this</span>
+            <span class="calc-icon text-slate-400 text-lg font-light transition-colors" style="font-family: var(--font-sans);">+</span>
+          </button>
+          <div class="calc-method hidden pt-3">
+            <p class="text-xs text-slate-400 leading-relaxed" style="font-family: var(--font-sans);">
+              Leakage is the sum of three verified vectors: (1) <strong class="text-slate-600">Missed call loss</strong> — each unreturned call at an average $250 value × 22 business days; (2) <strong class="text-slate-600">No-show erosion</strong> — your monthly revenue × no-show rate; (3) <strong class="text-slate-600">Administrative friction</strong> — 2.8% of revenue lost to manual scheduling gaps. Recovery range assumes 70–90% capture of these leaks via autonomous interception.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -651,6 +663,11 @@
             <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">
               Autonomous baseline protection for independent operators who require essential intake coverage and patient recall automation.
             </p>
+            <div class="p-3 bg-teal-50 border border-teal-100 rounded-lg">
+              <span class="font-label text-[10px] uppercase tracking-wider text-[#0D9488] block">Typical Monthly Net Recovery</span>
+              <span class="font-mono-audit text-sm font-bold text-slate-800">$3,500 – $6,000</span>
+              <span class="text-[10px] text-slate-400 font-label">after Filrate fees</span>
+            </div>
             <ul class="space-y-3" style="font-family: var(--font-sans);">
               <li class="flex items-center gap-2.5 text-sm text-slate-600">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0D9488] flex-shrink-0"></span>
@@ -689,6 +706,11 @@
             <p class="text-sm text-slate-300 leading-relaxed" style="font-family: var(--font-sans);">
               Our comprehensive operational recovery suite built for practices seeking complete automation across all five primary revenue leaks.
             </p>
+            <div class="p-3 bg-teal-900/40 border border-teal-600/30 rounded-lg">
+              <span class="font-label text-[10px] uppercase tracking-wider text-teal-400 block">Typical Monthly Net Recovery</span>
+              <span class="font-mono-audit text-sm font-bold text-white">$18,000 – $34,000</span>
+              <span class="text-[10px] text-slate-400 font-label">after Filrate fees · guaranteed minimum</span>
+            </div>
             <ul class="space-y-3" style="font-family: var(--font-sans);">
               <li class="flex items-center gap-2.5 text-sm text-slate-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
@@ -746,6 +768,55 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- DEPLOYMENT TIMELINE -->
+    <section id="timeline" class="border-t border-[rgba(15,23,42,0.06)] bg-white py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-8 space-y-12 reveal">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">Onboarding Process</span>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A]">From Audit to Live in 14 Days</h2>
+          <p class="text-slate-500" style="font-family: var(--font-sans);">No disruption to your current operations. We handle the integration, you handle the recovered revenue.</p>
+        </div>
+
+        <div class="relative">
+          <div class="hidden md:block absolute top-6 left-0 right-0 h-[2px] bg-slate-100"></div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="relative">
+              <div class="w-12 h-12 rounded-full bg-[#0D9488] text-white flex items-center justify-center font-mono-audit font-bold text-sm mb-4 relative z-10 mx-auto md:mx-0 border-4 border-white shadow-sm">01</div>
+              <div class="text-center md:text-left">
+                <span class="font-label text-[10px] uppercase tracking-wider text-[#0D9488] block mb-1">Day 1–2</span>
+                <h3 class="font-serif-luxury text-lg text-slate-800 mb-2">Revenue Leak Audit</h3>
+                <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">30-minute diagnostic call. We analyze your PMS data, call logs, and scheduling patterns to quantify your exact leakage.</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="w-12 h-12 rounded-full bg-[#0F172A] text-white flex items-center justify-center font-mono-audit font-bold text-sm mb-4 relative z-10 mx-auto md:mx-0 border-4 border-white shadow-sm">02</div>
+              <div class="text-center md:text-left">
+                <span class="font-label text-[10px] uppercase tracking-wider text-slate-500 block mb-1">Day 3–5</span>
+                <h3 class="font-serif-luxury text-lg text-slate-800 mb-2">Integration & BAA</h3>
+                <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">Secure API connection to your Dentrix, Eaglesoft, or Open Dental. Business Associate Agreement signed. Telephony routed.</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="w-12 h-12 rounded-full bg-[#0F172A] text-white flex items-center justify-center font-mono-audit font-bold text-sm mb-4 relative z-10 mx-auto md:mx-0 border-4 border-white shadow-sm">03</div>
+              <div class="text-center md:text-left">
+                <span class="font-label text-[10px] uppercase tracking-wider text-slate-500 block mb-1">Day 6–10</span>
+                <h3 class="font-serif-luxury text-lg text-slate-800 mb-2">Configuration & Testing</h3>
+                <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">Adam voice workflows calibrated to your practice. Recall cadences, no-show protocols, and treatment follow-up sequences mapped.</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="w-12 h-12 rounded-full bg-[#0D9488] text-white flex items-center justify-center font-mono-audit font-bold text-sm mb-4 relative z-10 mx-auto md:mx-0 border-4 border-white shadow-sm">04</div>
+              <div class="text-center md:text-left">
+                <span class="font-label text-[10px] uppercase tracking-wider text-[#0D9488] block mb-1">Day 11–14</span>
+                <h3 class="font-serif-luxury text-lg text-slate-800 mb-2">Go Live & Monitor</h3>
+                <p class="text-sm text-slate-500 leading-relaxed" style="font-family: var(--font-sans);">Autonomous intercepts activated. Real-time leak reporting dashboard delivered. Weekly check-ins for first 60 days.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -903,7 +974,7 @@
             </div>
             <div class="faq-answer"><div>
               <p class="pt-4 text-slate-500 text-sm leading-relaxed max-w-3xl" style="font-family: var(--font-sans);">
-                Most practices see measurable revenue recovery within 30 days. Our guarantee threshold is <span class="font-mono-audit font-semibold">$5,000</span> in recovered revenue within 60 days, and that's a conservative floor.
+                Most practices see measurable revenue recovery within 30 days. Our written 60-day guarantee commits to a minimum of <span class="font-mono-audit font-semibold">$18,000</span> in recovered revenue for Standard tier partners, and <span class="font-mono-audit font-semibold">$5,000</span> for Sentry tier. If we do not hit the tier-specific threshold, you pay nothing for that period. These are conservative floors, not ceilings.
               </p>
             </div></div>
           </div>
@@ -949,6 +1020,43 @@
             <span class="font-mono-audit text-2xl font-bold text-[#0F172A] block">5/mo</span>
             <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">New Practices Onboarded</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY & COMPLIANCE BRIEF -->
+    <section id="compliance" class="border-t border-[rgba(15,23,42,0.06)] bg-white py-20 lg:py-24">
+      <div class="max-w-5xl mx-auto px-8 space-y-8 reveal">
+        <div class="text-center space-y-4">
+          <span class="font-label text-[10px] text-[#0D9488] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">Infrastructure</span>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#0F172A]">Built on security, not just promises.</h2>
+          <p class="text-slate-500 max-w-2xl mx-auto" style="font-family: var(--font-sans);">Every patient interaction is handled with the same rigor as your clinical equipment.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-xl font-bold text-[#0F172A] block">TLS 1.2+</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Transit Encryption</span>
+            <p class="text-xs text-slate-500 mt-2" style="font-family: var(--font-sans);">All PHI encrypted in transit via TLS 1.2 or higher between your PMS and Filrate servers.</p>
+          </div>
+          <div class="p-5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-xl font-bold text-[#0F172A] block">AES-256</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">At-Rest Storage</span>
+            <p class="text-xs text-slate-500 mt-2" style="font-family: var(--font-sans);">Patient data, call recordings, and ledger snapshots stored with AES-256 encryption on HIPAA-compliant infrastructure.</p>
+          </div>
+          <div class="p-5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-xl font-bold text-[#0F172A] block">RBAC</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Access Controls</span>
+            <p class="text-xs text-slate-500 mt-2" style="font-family: var(--font-sans);">Role-based access limits data exposure to only the engineers and systems required for your specific service tier.</p>
+          </div>
+          <div class="p-5 bg-slate-50 rounded-xl border border-slate-100">
+            <span class="font-mono-audit text-xl font-bold text-[#0F172A] block">BAA</span>
+            <span class="font-label text-[10px] uppercase tracking-wider text-slate-400 block mt-1">Business Associate</span>
+            <p class="text-xs text-slate-500 mt-2" style="font-family: var(--font-sans);">Signed Business Associate Agreement executed with every practice partner before any PHI is accessed or processed.</p>
+          </div>
+        </div>
+        <div class="text-center pt-4">
+          <p class="text-xs text-slate-400" style="font-family: var(--font-sans);">SOC 2 Type II certified hosting · Encrypted backups · NIST 800-88 data destruction · Full audit logging</p>
+          <a href="./hipaa.html" class="inline-block mt-2 text-xs text-[#0D9488] hover:underline font-label uppercase tracking-wider">Read Full HIPAA Statement →</a>
         </div>
       </div>
     </section>
